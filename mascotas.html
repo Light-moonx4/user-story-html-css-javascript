@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mis Mascotas — Portafolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style2.css">
+
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="header__logo">
+        <span class="logo-text">DevPortfolio</span>
+      </div>
+      <nav class="nav" id="nav">
+        <a href="index.html" class="nav__link">← Inicio</a>
+        <a href="index.html#proyectos" class="nav__link">Proyectos</a>
+        <a href="index.html#galeria" class="nav__link">Galería</a>
+        <a href="mascotas.html" class="nav__link">Mascotas</a>
+      </nav>
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section pets-hero">
+      <div class="container">
+        <h1 class="section__title">Mascotas</h1>
+        <p class="section__text" style="margin-inline: auto; text-align:center;">
+          Conoce a mis adorables compañeros peludos que me dan energía para programar.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="pets-grid">
+          <div class="pet-card">
+            <img src="https://eq2imhfmrcc.exactdn.com/wp-content/uploads/2016/08/golden-retriever.jpg?strip=all" alt="Luna — perrita labrador" />
+            <div class="pet-card__body">
+              <h2 class="pet-card__name">Luna</h2>
+              <p class="pet-card__desc">Labrador retriever de 3 años. Le encanta jugar a buscar la pelota y dormir junto al teclado.</p>
+            </div>
+          </div>
+          <div class="pet-card">
+            <img src="https://imagenes.elpais.com/resizer/v2/NZJCPWHXINAOZNBVOWNVKJO5ZU.jpg?auth=c762895721540964c8025922fdeae9c74bfae633361228ec5aa2158e4de7865e&width=1200" alt="Mochi — gato naranja" />
+            <div class="pet-card__body">
+              <h2 class="pet-card__name">Mochi</h2>
+              <p class="pet-card__desc">Gato naranja de 2 años. Experto en sentarse encima del teclado justo cuando más se necesita.</p>
+            </div>
+          </div>
+          <div class="pet-card">
+            <img src="https://cdn.download.ams.birds.cornell.edu/api/v2/asset/95481341/1200" alt="Paco — loro verde" />
+            <div class="pet-card__body">
+              <h2 class="pet-card__name">Paco</h2>
+              <p class="pet-card__desc">Loro cotorro de 5 años. Ha aprendido a decir "git commit" y "deploy" con mucho entusiasmo.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align:center; margin-top: var(--space-xl);">
+          <a href="index.html" class="btn btn--outline">← Volver al portafolio</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Jonathan Escorcia·  Pet-friendly developer</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>

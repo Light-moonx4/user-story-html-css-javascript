@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Portafolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER / NAV ===== -->
+  <header class="header">
+    <div class="container">
+      <div class="header__logo">
+        <span class="logo-text">DevPortafolio</span>
+      </div>
+      <nav class="nav" id="nav">
+        <a href="#inicio" class="nav__link">Inicio</a>
+        <a href="#sobre-mi" class="nav__link">Sobre mí</a>
+        <a href="#proyectos" class="nav__link">Proyectos</a>
+        <a href="#galeria" class="nav__link">Galería</a>
+        <a href="mascotas.html" class="nav__link">Mascotas</a>
+        <a href="#contacto" class="nav__link">Contacto</a>
+      </nav>
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="inicio">
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <!-- Mensaje de bienvenida dinámico (JS lo inserta) -->
+        <p class="hero__greeting" id="welcomeMsg"></p>
+        <h1 class="hero__title">Hola, soy <span class="highlight">Jonathan Escorcia</span></h1>
+        <p class="hero__subtitle" id="heroParagraph">
+          Desarrollador web apasionado por crear experiencias digitales únicas y accesibles.
+        </p>
+        <!-- Botón Task 5: cambia texto del párrafo -->
+        <button class="btn btn--primary" id="btnChangeText">Cambiar descripción</button>
+        <a href="#proyectos" class="btn btn--outline">Ver proyectos</a>
+      </div>
+      <div class="hero__avatar">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy1myYWK0hZ66B_D8IcXk2eJonQesgds1VnQ&s"
+             alt="Jonathan Escorcia"
+             class="avatar-img" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SOBRE MÍ ===== -->
+  <section class="section" id="sobre-mi">
+    <div class="container">
+      <h2 class="section__title">Sobre mí</h2>
+      <p class="section__text">
+        Soy un desarrollador web con experiencia en HTML, CSS y JavaScript.
+        Me encanta diseñar interfaces limpias y crear soluciones que hagan la vida más fácil.
+        Siempre estoy aprendiendo y explorando nuevas tecnologías.
+      </p>
+      <div class="skills-grid">
+        <div class="skill-tag">HTML5</div>
+        <div class="skill-tag">CSS3</div>
+        <div class="skill-tag">JavaScript</div>
+        <div class="skill-tag">Responsive Design</div>
+        <div class="skill-tag">Git</div>
+        <div class="skill-tag">UI/UX</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROYECTOS ===== -->
+  <section class="section section--alt" id="proyectos">
+    <div class="container">
+      <h2 class="section__title">Proyectos</h2>
+
+      <!-- Botón Task 5: mostrar/ocultar proyectos extra -->
+      <div class="projects-controls">
+        <button class="btn btn--secondary" id="btnToggleProjects">➕ Mostrar más proyectos</button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+        <article class="card">
+          <div class="card__icon">🌐</div>
+          <h3 class="card__title">Sitio Web Corporativo</h3>
+          <p class="card__desc">Landing page moderna para una empresa de tecnología con animaciones CSS.</p>
+          <a href="#" class="btn btn--sm">Ver proyecto</a>
+        </article>
+        <article class="card">
+          <div class="card__icon">🛒</div>
+          <h3 class="card__title">Tienda Online</h3>
+          <p class="card__desc">E-commerce responsivo con carrito de compras y filtros dinámicos.</p>
+          <a href="#" class="btn btn--sm">Ver proyecto</a>
+        </article>
+        <article class="card">
+          <div class="card__icon">📱</div>
+          <h3 class="card__title">App de Tareas</h3>
+          <p class="card__desc">Gestor de tareas con persistencia local y diseño minimalista.</p>
+          <a href="#" class="btn btn--sm">Ver proyecto</a>
+        </article>
+      </div>
+
+      <!-- Proyectos extra (ocultos por defecto) -->
+      <div class="projects-grid projects-extra hidden" id="projectsExtra">
+        <article class="card">
+          <div class="card__icon">📊</div>
+          <h3 class="card__title">Dashboard Analytics</h3>
+          <p class="card__desc">Panel de métricas con gráficas interactivas y datos en tiempo real.</p>
+          <a href="#" class="btn btn--sm">Ver proyecto</a>
+        </article>
+        <article class="card">
+          <div class="card__icon">🎮</div>
+          <h3 class="card__title">Juego Educativo</h3>
+          <p class="card__desc">Quiz interactivo para aprender programación de forma divertida.</p>
+          <a href="#" class="btn btn--sm">Ver proyecto</a>
+        </article>
+        <article class="card">
+          <div class="card__icon">🤖</div>
+          <h3 class="card__title">Chatbot UI</h3>
+          <p class="card__desc">Interfaz de asistente virtual con diseño conversacional moderno.</p>
+          <a href="#" class="btn btn--sm">Ver proyecto</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALERÍA ===== -->
+  <section class="section" id="galeria">
+    <div class="container">
+      <h2 class="section__title">Galería</h2>
+      <div class="gallery">
+        <figure class="gallery__item">
+          <img src="https://picsum.photos/seed/g1/400/300" alt="Proyecto 1" />
+          <figcaption>Diseño Web</figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="https://picsum.photos/seed/g2/400/300" alt="Proyecto 2" />
+          <figcaption>Branding</figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="https://picsum.photos/seed/g3/400/300" alt="Proyecto 3" />
+          <figcaption>UX Research</figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="https://picsum.photos/seed/g4/400/300" alt="Proyecto 4" />
+          <figcaption>Prototipado</figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="https://picsum.photos/seed/g5/400/300" alt="Proyecto 5" />
+          <figcaption>Fotografía</figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="https://picsum.photos/seed/g6/400/300" alt="Proyecto 6" />
+          <figcaption>Ilustración</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTO ===== -->
+  <section class="section section--alt" id="contacto">
+    <div class="container contact-wrap">
+      <h2 class="section__title">Contacto</h2>
+      <p class="section__text">jaojaododaohas@gmail.com</p>
+      <p class="section__text">3145656961</p>
+      <a href="https://github.com/Light-moonx4" class="btn btn--primary">Github</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Jonathan Escorcia.</p>
+    </div>
+  </footer>
+
+  <!-- Notificación de bienvenida (Task 5) -->
+  <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+
+  <!-- Script enlazado antes de </body> (Task 1) -->
+  <script src="script.js"></script>
+</body>
+</html>
